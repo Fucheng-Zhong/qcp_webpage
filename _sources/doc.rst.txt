@@ -1,0 +1,7 @@
+.. exec::
+   
+   import sys
+   from qmostdxu import DXUDefinition
+   with open('./yaml/iwg9.yml') as fp:
+       dxudef = DXUDefinition(fp)
+   dxudef.to_rst(sys.stdout)

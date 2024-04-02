@@ -1,0 +1,70 @@
+description: Extension header metadata
+type: array
+items:
+  type: object
+  properties:
+    name:
+      description: Unique header keyword
+      type: string
+    description:
+      description: Header data description
+      type: string
+    datatype:
+      description:
+        Header value datatype. Either datatype of value must be given.
+      type: string
+      enum:
+        - str
+        - int
+        - float
+        - bool
+    array:
+      description:
+        True if the data is a (short) array. This will add a number
+        to the name for each value, starting with one.
+      type: boolean
+      default: false
+    value:
+      description:
+        Header value (if fixed). Either datatype of value must be given.
+      type:
+        - string
+        - number
+        - boolean
+    unit:
+      description: Unit for the header value
+      type: string
+      format: fitsunit
+    range:
+      description: Possible range for numbers
+      type: object
+      properties:
+        min:
+          description: Minimal value
+          type: number
+        max:
+          description: Maximal value
+          type: number
+    values:
+      description: Allowed values, with description
+      type: object
+    regexp:
+      description: Regular expression to check the string value
+      type: string
+      format: regex
+    delimiter:
+      description:
+        Delimiter to concatenate multiple strings into one string value
+        (e.g. multiple flags, names etc.). Recommended delimiter is the
+        pipe symbol '|'.
+      type: string
+    required:
+      description: Whether this keyword is mandatory
+      type: boolean
+      default: true
+    notes:
+      description: Additional notes
+      type: string
+  required:
+    - name
+    - description

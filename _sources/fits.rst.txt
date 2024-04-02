@@ -1,0 +1,18 @@
+FITS column definitions
+=======================
+
+These definitions are for reference.
+
+To save space, the content of the TCOMM\ *n* column, which contains
+the column description is not shown here.  All Headers, except
+TZERO\ *n*, TLMIN\ *n* and TLMAN\ *n* are written as strings. Empty cells
+will not be written into the header.
+
+.. exec::
+   
+   import sys
+   from qmostdxu import DXUDefinition
+   with open('./yaml/qcp.yml') as fp:
+       dxudef = DXUDefinition(fp)
+   dxudef.to_fits_rst(sys.stdout)
+

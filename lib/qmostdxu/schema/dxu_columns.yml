@@ -1,0 +1,100 @@
+description: Extension table columns
+type: array
+items:
+  type: object
+  properties:
+    name:
+      description:
+        Unique column name. In FITS, this will be the TTYPEn header.
+      type: string
+    description:
+      description:
+        Column description. In FITS, this will be the TCOMMn header.
+      type: string
+    unit:
+      description:
+        Unit of this column. Must be FITS conform. In FITS, this will
+        be the TUNITn keyword.
+      type: string
+      format: fitsunit
+    ucd:
+      description:
+        UCD of this columns. In FITS, this will be the TUCDn keyword.
+      type: string
+      format: vo_ucd
+    datatype:
+      description:
+        Column datatype. In FITS, this will be converted to the TFORMn
+        keyword.
+      type: string
+      enum:
+        - str
+        - bool
+        - int8
+        - int16
+        - int32
+        - int64
+        - uint8
+        - uint16
+        - uint32
+        - uint64
+        - float
+        - double
+    maxlength:
+      description:
+        Maximum length for strings. In FITS, this is part of the
+        TFORMn keyword.
+      type: integer
+    arraysize:
+      description:
+        Fixed length of the data array. This implies that the data
+        will be stored as array. In FITS, this is part of the TFORMn
+        keyword.
+      type: integer
+    range:
+      description: Possible range for numbers
+      type: object
+      properties:
+        min:
+          description:
+            Minimal value. In FITS, this will be the TLMINn keyword.
+          type: number
+        max:
+          description:
+            Maximal value. In FITS, this will be the TLMAXn keyword.
+          type: number
+    values:
+      description:
+        Allowed values, with description (if useful)
+      type: object
+    maybenull:
+      description:
+        Whether NULL/NaN are allowed. Note that NULL values must be
+        used according to the FITS standard, i.e. for integer
+        datatypes the TNULL keyword must be set.
+      type: boolean
+      default: false
+    regexp:
+      description: Regular expression to check the string value
+      type: string
+      format: regex
+    delimiter:
+      description:
+        Delimiter to concatenate multiple strings into one string cell
+        (e.g. multiple flags, names etc.). Recommended delimiter is the
+        pipe symbol '|'.
+      type: string
+    internal:
+      description:
+        Whether the column is used only internally or is published via
+        4PA
+      type: boolean
+      default: false
+    notes:
+      description: Additional notes
+      type: string
+  required:
+    - name
+    - description
+    - datatype
+    - ucd

@@ -1,0 +1,32 @@
+DXU example
+===========
+
+This example is stolen from an intermediate version of a machine
+readable QXP DXU. It is meant to test and to illustrate how DXUs are
+created, documented and used.
+
+.. toctree::
+   :maxdepth: 2
+
+   general
+   doc
+   fits
+   changes
+
+Development links
+-----------------
+
+* `Gitlab repository`_
+
+* `Jira ticket system`_
+
+.. _Gitlab repository: https://gitlab.4most.eu/drm/dxu-example
+
+.. _Jira ticket system: https://4most-tickets.atlassian.net/jira/software/c/projects/DRM/issues/
+
+External documents
+------------------
+
+* `DXU schema`_
+
+.. _DXU schema: https://www.4most.eu/readthedocs/drm/dxu-schema

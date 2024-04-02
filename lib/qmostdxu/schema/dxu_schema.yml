@@ -1,0 +1,52 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: https://gitlab.4most.eu/data-curation/dxu-schema
+title: DXU table structure
+description: Main file structure
+type: object
+properties:
+  name:
+    description: DXU name
+    type: string
+  version:
+    description: DXU format version
+    type: string
+  creators:
+    description: List of people who are responsible for the DXU
+    type: array
+    items:
+      type: object
+      properties:
+        first_name:
+          description: First (given) name
+          type: string
+        last_name:
+          description: Last (familiy) name
+          type: string
+        email:
+          description: E-mail address
+          type: string
+          format: email
+        affiliation:
+          description: Authors affiliation
+          type: string
+      reqired:
+        - first_name
+        - last_name
+  description:
+    description: General description of this DXU
+    type: string
+  extensions:
+    description: List of extensions provided by this DXU
+    type: array
+    items:
+      type: object
+      properties:
+        header: !include dxu_header.yml
+        columns: !include dxu_columns.yml
+
+required:
+  - name
+  - version
+  - creators
+  - description
+  - extensions

@@ -1,0 +1,5 @@
+General structure
+=================
+
+Here, the general structure will be included. This should, however, be
+the same for all L2 DXUs and may be extracted to a separate document.
