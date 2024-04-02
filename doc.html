@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Example DXU &#8212; Example DXU 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/bootstrap-astropy.css?v=9d21690f" />
+    <link rel="stylesheet" type="text/css" href="_static/brand.css?v=16f30d11" />
+    
+    <script src="_static/documentation_options.js?v=2709fde1"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script type="text/javascript" src="_static/sidebar.js"></script>
+    <script type="text/javascript" src="_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="FITS column definitions" href="fits.html" />
+    <link rel="prev" title="General structure" href="general.html" />
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,600' rel='stylesheet' type='text/css'/>
+
+  </head><body>
+<div class="topbar">
+  <a class="brand" title="Documentation Home" href="index.html"><span id="logotext1">DRM</span><span id="logotext2">Example DXU</span><span id="logotext3">:docs</span></a>
+  <ul>
+    
+    <li><a class="homelink" title="Astropy Homepage" href="http://www.astropy.org"></a></li>
+    <li><a title="General Index" href="genindex.html">Index</a></li>
+    <li><a title="Module Index" href="py-modindex.html">Modules</a></li>
+    <li>
+      
+      
+<form action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+      
+    </li>
+  </ul>
+</div>
+
+<div class="related">
+    <h3>Navigation</h3>
+    <ul>
+      <li class="right">
+	<a href="fits.html" title="FITS column definitions">
+	  next &raquo;
+	</a>
+      </li>
+      <li class="right">
+	<a href="general.html" title="General structure">
+	  &laquo; previous
+	</a>
+	 |
+      </li>
+      <li>
+	<a href="index.html">Example DXU 0.1 documentation</a>
+	 &#187;
+      </li>
+      
+      <li>Example DXU</li> 
+    </ul>
+</div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="example-dxu">
+<h1>Example DXU<a class="headerlink" href="#example-dxu" title="Link to this heading">¶</a></h1>
+<dl class="simple">
+<dt><strong>Author(s)</strong></dt><dd><p>Fucheng Zhong</p>
+</dd>
+<dt><strong>Version</strong></dt><dd><p>0.1</p>
+</dd>
+</dl>
+<p>FITS output from the 4MOST iwg9 pipeline</p>
+<section id="primary-extension">
+<h2>primary extension<a class="headerlink" href="#primary-extension" title="Link to this heading">¶</a></h2>
+<p>Primary Header of the FITS, Table 9 of the DXU doucument</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1.1%" />
+<col style="width: 11.0%" />
+<col style="width: 44.0%" />
+<col style="width: 44.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Header keyword</p></th>
+<th class="head"><p>Value/<em>Type</em></p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>PRODCATG</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">SCIENCE.CATALOG</span></code></p></td>
+<td><p>Data product category</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>ORIGIN</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">ESO-PARANAL</span></code></p></td>
+<td><p>Observatory or facility</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>TELESCOP</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">ESO-VISTA</span></code></p></td>
+<td><p>ESO telescope designation</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>INSTRUME</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">QMOST</span></code></p></td>
+<td><p>Instrument name</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>OBJECT</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">MULTI</span></code></p></td>
+<td><p>Target designation as given by PI</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>PROG_ID</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">60.A-9296(A)</span></code></p></td>
+<td><p>Observing run identification code: TP.C-NNNN(R)</p></td>
+<td><p>updated from MEC primary header. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>OBID1</p></th>
+<td><p>3473094</p></td>
+<td><p>Observation Block IDs of the observations used</p></td>
+<td><p>updated from MEC OBMETATAB. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>MJD-OBS</p></th>
+<td><p>59889.9586902777</p></td>
+<td><p>Start of (earliest) observation</p></td>
+<td><p>updated from MEC OBMETATAB. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>MJD-END</p></th>
+<td><p>59890.37167297</p></td>
+<td><p>End of (latest) observation</p></td>
+<td><p>updated from MEC OBMETATAB. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>OBSTECH</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">MOS</span></code></p></td>
+<td><p>Technique used during observation</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>PROCSOFT</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">CNN</span></code></p></td>
+<td><p>Reduction software system and version number</p></td>
+<td><p>updated by qcp. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>REFERENC</p></th>
+<td><p><em>None</em></p></td>
+<td><p>Primary publication describing data product</p></td>
+<td><p>static</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>PROVXTN</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">T</span></code></p></td>
+<td><p>Provenance of files originating data product</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>QMNODE</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">QCP</span></code></p></td>
+<td><p>4MOST pipeline that produced this data product</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>GIT_ID</p></th>
+<td><p><em>None</em></p></td>
+<td><p>Specific git repository tag or hash for product</p></td>
+<td><p>updated by QXP manager</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>DXUDOC</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">4MOST-IWG9-4CP-DXU</span></code></p></td>
+<td><p>Data eXchange Unit document</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>PUSER</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">IWG</span> <span class="pre">co-lead</span> <span class="pre">Caroline</span> <span class="pre">Heneka</span></code></p></td>
+<td><p>User responsible for running pipeline</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>PCONTACT</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">heneka&#64;thphys.uni-</span> <span class="pre">heidelberg.de</span></code></p></td>
+<td><p>Email regarding this product</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>DATETIME</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">2023-03-29T23:07:12Z</span></code></p></td>
+<td><p>DateTime stamp when file is created in 4DPC</p></td>
+<td><p>updated by QXP manager. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>CHECKSUM</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">KRZFKRW9KRWEKRW9</span></code></p></td>
+<td><p>2023-03-27 22:04:38</p></td>
+<td><p>set by fits.write. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>DATASUM</p></th>
+<td><p>0</p></td>
+<td><p>2023-03-27 22:04:38</p></td>
+<td><p>set by fits.write. Static value</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>EXTNAME</p></th>
+<td><p><code class="docutils literal notranslate"><span class="pre">PHASE3CATALOG</span></code></p></td>
+<td><p>Fits extension name</p></td>
+<td><p>static. Static value</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>RELEASE</p></th>
+<td><p><em>None</em></p></td>
+<td><p>Data release of this data product (filled by 4OR)</p></td>
+<td><p>set by 4OR</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="qcp-extension">
+<h2>qcp extension<a class="headerlink" href="#qcp-extension" title="Link to this heading">¶</a></h2>
+<p>IWG9 piplieline results derived from the L1 spectra. Table 11 of the doucument.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 1.1%" />
+<col style="width: 11.0%" />
+<col style="width: 44.0%" />
+<col style="width: 44.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head stub"><p>Column name</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><th class="stub"><p>TARGET_UID</p></th>
+<td><p>str</p></td>
+<td><p>4MOST object name from coordinates</p></td>
+<td><p>Unique target name</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>TARGET_RA</p></th>
+<td><p>double</p></td>
+<td><p>Catalogue RA of object in decimal degrees [°]</p></td>
+<td><p>Range: 0.0 to 360.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>TARGET_DEC</p></th>
+<td><p>double</p></td>
+<td><p>Catalogue Declination of object in decimal degrees [°]</p></td>
+<td><p>Range: -90.0 to 90.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>OB</p></th>
+<td><p>str</p></td>
+<td><p>Observation Block</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SNR</p></th>
+<td><p>float</p></td>
+<td><p>Signal-to-noise ratio</p></td>
+<td><p>Range: ≥ 0.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>N_OBS</p></th>
+<td><p>uint16</p></td>
+<td><p>Number of spectra taken</p></td>
+<td><p>Range: ≥ 0.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>OBJ_TYPE</p></th>
+<td><p>str</p></td>
+<td><p>Classification of object</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>CLASS_STAR</p></th>
+<td><p>float</p></td>
+<td><p>Probability class star</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>CLASS_STAR _ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty CLASS_STAR</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>CLASS_GALAXY</p></th>
+<td><p>float</p></td>
+<td><p>Probability class galaxy</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>CLASS_GALA XY_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty class galaxy</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>CLASS_AGN</p></th>
+<td><p>float</p></td>
+<td><p>Probability class AGN</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>CLASS_AGN_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty class AGN</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>CLASS_QSO</p></th>
+<td><p>float</p></td>
+<td><p>Probability class QSO</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>CLASS_UNKNOWN</p></th>
+<td><p>float</p></td>
+<td><p>Anomaly score</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_GAL_FGKM</p></th>
+<td><p>float</p></td>
+<td><p>Probability galactic sub-class FGKM</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_GAL_FGKM_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty galactic sub-class FGKM</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_GAL_OBA</p></th>
+<td><p>float</p></td>
+<td><p>Probability galactic sub-class OBA</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_GAL_OBA_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty galactic sub-class OBA</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_GAL_WD</p></th>
+<td><p>float</p></td>
+<td><p>Probability galactic sub-class WD</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_GAL_WD_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty galactic sub-class WD</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_GAL_BIN</p></th>
+<td><p>float</p></td>
+<td><p>Probability galactic sub-class binary</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_GAL_BIN_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty galactic sub-class binary</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_GAL_VAR</p></th>
+<td><p>float</p></td>
+<td><p>Probability galactic sub-class variable (Cepheids, RR Lyrae)</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_GAL_VAR_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty galactic sub-class variable (Cepheids, RR Lyrae)</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_XGAL_SFG</p></th>
+<td><p>float</p></td>
+<td><p>Probability extragalactic sub-class star forming galaxy</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_XGAL_SFG_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty extragalactic sub-class star forming galaxy</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_XGAL_NEL_AGN</p></th>
+<td><p>float</p></td>
+<td><p>Probability extragalactic sub-class narrow emission-line AGN</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_XGAL_NEL_AGN_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty extragalactic sub-class narrow emission-line AGN</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_X GAL_BEL_AGN</p></th>
+<td><p>float</p></td>
+<td><p>Probability extragalactic sub-class broad emission-line AGN</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_XGAL_BEL_AGN_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty extragalactic sub-class broad emission-line AGN</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_XGAL_BAL_AGN</p></th>
+<td><p>float</p></td>
+<td><p>Probability extragalactic sub-class broad absorption-line AGN</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_XGAL_BAL_AGN_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty extragalactic sub-class broad absorption-line AGN</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_XGAL_FEATURELESS</p></th>
+<td><p>float</p></td>
+<td><p>Probability extragalactic sub-class featureless (blazar)</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_XGAL_FEATURELESS_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty extragalactic sub-class featureless (blazar)</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-odd"><th class="stub"><p>SUBCLASS_XGAL_BROADLINE</p></th>
+<td><p>float</p></td>
+<td><p>Probability extragalactic sub-class absorbers</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>SUBCLASS_XGAL_BROADLINE_ERR</p></th>
+<td><p>float</p></td>
+<td><p>Uncertainty extragalactic sub-class absorbers</p></td>
+<td><p>Range: 0.0 to 1.0</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><h3>Page Contents</h3>
+<ul>
+<li><a class="reference internal" href="#">Example DXU</a><ul>
+<li><a class="reference internal" href="#primary-extension">primary extension</a></li>
+<li><a class="reference internal" href="#qcp-extension">qcp extension</a></li>
+</ul>
+</li>
+</ul>
+
+
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="general.html"
+                          title="previous chapter">General structure</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="fits.html"
+                          title="next chapter">FITS column definitions</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/doc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<form action="search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+<footer class="footer">
+  <p class="pull-right">
+    <a href="_sources/doc.rst.txt"
+       rel="nofollow">Page Source</a> &nbsp;
+    <a href="#">Back to Top</a></p>
+  <p>
+    &copy; Copyright 2023, 4MOST.<br/>
+    Created using <a href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> 7.2.6. &nbsp;
+  </p>
+</footer>
+  </body>
+</html>
